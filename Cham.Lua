@@ -1,13 +1,11 @@
-local settings = {
- 
-   fillcolor = false, Color3.fromRGB(255, 255, 255);
+
+ local esp = {
+   fillcolor = {false, Color3.new(255, 255, 255)};
    filltransparency = .75;
  
-   outlinecolor = false, Color3.fromRGB(255, 255, 255);
-   outlinetransparency = 0;
- 
-};
- 
+   outlinecolor = {false, Color3.new(255, 255, 255)};
+   outlinetransparency = .75;
+    };
 -- Script --
  
 local plr = game:service'Players'.LocalPlayer
@@ -45,4 +43,4 @@ end
 workspace.Players.DescendantAdded:Connect(function(v)
    addtoplayer(v)
 end)
-return settings
+return esp
