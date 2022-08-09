@@ -1,12 +1,14 @@
  
 local settings = {
- 
-   fillcolor = Color3.fromRGB(255, 255, 255);
+  Line = {
+     fillcolor = Color3.fromRGB(255, 255, 255);
    filltransparency = .75;
  
    outlinecolor = Color3.fromRGB(255, 255, 255);
    outlinetransparency = 0;
  Visible = false
+    },
+   
 }
  
 -- Script --
