@@ -1,11 +1,14 @@
-
- local esp = {
-   fillcolor = {false, Color3.new(255, 255, 255)};
+ 
+local settings = {
+ 
+   fillcolor = Color3.fromRGB(255, 255, 255);
    filltransparency = .75;
  
-   outlinecolor = {false, Color3.new(255, 255, 255)};
-   outlinetransparency = .75;
-    };
+   outlinecolor = Color3.fromRGB(255, 255, 255);
+   outlinetransparency = 0;
+ Visible = false
+}
+ 
 -- Script --
  
 local plr = game:service'Players'.LocalPlayer
@@ -25,6 +28,7 @@ local function addhighlight(object)
        if not highlight.Adornee or not highlight.Adornee.Parent then
            highlight:Destroy()    
        end
+  
    end)
  
    return highlight
@@ -43,4 +47,3 @@ end
 workspace.Players.DescendantAdded:Connect(function(v)
    addtoplayer(v)
 end)
-return esp
