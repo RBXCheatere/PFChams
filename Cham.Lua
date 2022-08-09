@@ -20,11 +20,11 @@ local function addhighlight(object)
    local highlight = Instance.new('Highlight', highlights)
    highlight.Adornee = object
  
-   highlight.FillColor = settings.fillcolor
-   highlight.FillTransparency = settings.filltransparency
+   highlight.FillColor = Line.fillcolor
+   highlight.FillTransparency = Line.filltransparency
  
-   highlight.OutlineColor = settings.outlinecolor
-   highlight.OutlineTransparency = settings.outlinetransparency
+   highlight.OutlineColor = Line.outlinecolor
+   highlight.OutlineTransparency = Line.outlinetransparency
  
    highlight.Adornee.Changed:Connect(function()
        if not highlight.Adornee or not highlight.Adornee.Parent then
@@ -49,3 +49,4 @@ end
 workspace.Players.DescendantAdded:Connect(function(v)
    addtoplayer(v)
 end)
+return settings
